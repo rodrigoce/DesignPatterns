@@ -9,7 +9,7 @@ namespace DesignPatterns
             Console.WriteLine("Escolha o Design Pattern");
             Console.WriteLine("");
             Console.WriteLine("a - Fluent Builder Inheritance With Recursive Generics");
-            var c = Console.ReadKey();
+            var c = Console.ReadKey(); 
 
             switch (c.KeyChar)
             {
