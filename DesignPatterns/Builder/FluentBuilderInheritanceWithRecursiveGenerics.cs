@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FluentBuilderInheritanceWithRecursiveGenerics
+namespace Builder.FluentBuilderInheritanceWithRecursiveGenerics
 {
     public class Person
     {
