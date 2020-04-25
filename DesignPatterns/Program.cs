@@ -15,7 +15,9 @@ namespace DesignPatterns
             Console.WriteLine("D - Dependency Inversion Principle");
 
             Console.WriteLine("a - Fluent Builder Inheritance With Recursive Generics");
-            var c = Console.ReadKey(); 
+            Console.WriteLine("b - Functional Builder");
+            var c = Console.ReadKey();
+            Console.Clear();
 
             switch (c.KeyChar)
             {
@@ -36,7 +38,10 @@ namespace DesignPatterns
                     SOLID.DIP.Research.Main2();
                     break;
                 case 'a':
-                    Builder.FluentBuilderInheritanceWithRecursiveGenerics.Program2.Main2();
+                    Builder.FluentBuilderInherit.Program2.Main2();
+                    break;
+                case 'b':
+                    Builder.FunctionalBuilder.Program.Main2();
                     break; 
                 default:
                     break;

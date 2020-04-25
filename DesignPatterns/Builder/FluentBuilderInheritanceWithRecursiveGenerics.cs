@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Builder.FluentBuilderInheritanceWithRecursiveGenerics
+namespace DesignPatterns.Builder.FluentBuilderInherit
 {
     public class Person
     {
@@ -70,7 +70,7 @@ namespace Builder.FluentBuilderInheritanceWithRecursiveGenerics
         }
     }
 
-    internal class Program2
+    public class Program2
     {
         class SomeBuilder : PersonBirthDateBuilder<SomeBuilder>
         {
