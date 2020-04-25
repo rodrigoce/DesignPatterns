@@ -19,18 +19,18 @@ namespace DesignPatterns.Builder.FunctionalBuilder
        where TSelf : FunctionalBuiler<TSubject, TSelf>
        where TSubject : new()
     {   
-        private readonly List<Func<Person, Person>> actions
-            = new List<Func<Person, Person>>();
+        private readonly List<Func<TSubject, TSubject>> actions
+            = new List<Func<TSubject, TSubject>>();
 
-        public TSelf Do(Action<Person> action) => AddAction(action);
+        public TSelf Do(Action<TSubject> action) => AddAction(action);
 
-        private TSelf AddAction(Action<Person> action)
+        private TSelf AddAction(Action<TSubject> action)
         {
             actions.Add(p => { action(p); return p; });
             return (TSelf) this;
         }
 
-        public Person Build() => actions.Aggregate(new Person(), (p, f) => f(p));
+        public TSubject Build() => actions.Aggregate(new TSubject(), (p, f) => f(p));
     }
 
     public sealed class PersonBuilder : FunctionalBuiler<Person, PersonBuilder>
@@ -71,6 +71,10 @@ namespace DesignPatterns.Builder.FunctionalBuilder
                 .WorksAs("principal").Build();
 
             Console.WriteLine(person.ToString());
+
+            var l = new List<int>() { 1, 2, 3 };
+            
+            Console.WriteLine( l.Aggregate((total, cara) => total += cara) );
         }
     }
 }
