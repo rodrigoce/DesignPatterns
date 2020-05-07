@@ -14,8 +14,10 @@ namespace DesignPatterns
             Console.WriteLine("I - Interface Segregation Principle");
             Console.WriteLine("D - Dependency Inversion Principle");
 
-            Console.WriteLine("a - Fluent Builder Inheritance With Recursive Generics");
-            Console.WriteLine("b - Functional Builder");
+            Console.WriteLine("a - Builder and Fluent Builder");
+            Console.WriteLine("b - Fluent Builder Inheritance With Recursive Generics");
+            Console.WriteLine("c - Functional Builder");
+            Console.WriteLine("d - Faceted Builder");
             var c = Console.ReadKey();
             Console.Clear();
 
@@ -38,10 +40,16 @@ namespace DesignPatterns
                     SOLID.DIP.Research.Main2();
                     break;
                 case 'a':
-                    Builder.FluentBuilderInherit.Program2.Main2();
+                    Builder.Demo.Main2();
                     break;
                 case 'b':
+                    Builder.FluentBuilderInherit.Program2.Main2();
+                    break;
+                case 'c':
                     Builder.FunctionalBuilder.Program.Main2();
+                    break;
+                case 'd':
+                    Builder.FacetedBuilder.Demo.Main2();
                     break; 
                 default:
                     break;
